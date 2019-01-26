@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/days-since-david-spilled/precache-manifest.8715d3df27b0e4b0eb7547228091dad5.js"
+  "/days-since-david-spilled/precache-manifest.594289e41c275fb5694aa5e23633dba1.js"
 );
 
 workbox.clientsClaim();
