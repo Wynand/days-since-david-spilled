@@ -23,8 +23,14 @@ class TimeWidget extends React.Component{
 
   componentDidMount(){
     let logRef = firebase.database().ref('logs');
+
+    let time = 0;
     logRef.on('child_added', (snapshot) => {
-      this.setState({lastSpill:snapshot.val().time});
+      let t = snapshot.val().time
+      if(t > time){
+        time = t;
+        this.setState({lastSpill:t});
+      }
     })
     setInterval(()=>this.setState({now:Date.now()}), 500);
   }
